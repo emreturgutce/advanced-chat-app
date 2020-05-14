@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url("/images/chat.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.body-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -1px 3px 17px 0px rgba(0, 0, 0, 0.55);
+  width: 25%;
+  height: 65%;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.container form h1 {
+  font-size: 32px;
+  color: #707070;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container form label {
+  font-size: 24px;
+  color: #707070;
+  margin-right: auto;
+}
+
+.container form input {
+  outline: none;
+  font-size: 18px;
+  color: #707070;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #707070;
+  width: 50%;
+}
+
+.container form button {
+  outline: none;
+  border: none;
+  padding: 9px 16px;
+  font-size: 18px;
+  border-radius: 1rem;
+  background-color: #5e9bc4;
+  align-self: flex-end;
+  font-style: italic;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px 2px #aaaaaa;
+  margin-bottom: 2rem;
+  transition: box-shadow ease-in-out 0.12s;
+}
+
+.container form button:hover {
+  box-shadow: 2px 2px 8px 3.6px #aaaaaa;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 27%;
+    height: 58%;
+    padding: 1.7rem;
+  }
+
+  .container form h1 {
+    font-size: 28px;
+  }
+
+  .container form label {
+    font-size: 20px;
+  }
+
+  .container form input {
+    font-size: 16px;
+    width: 47%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 40%;
+    height: 65%;
+    padding: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 60%;
+    height: 65%;
+    padding: 1.8rem;
+  }
+
+  .row {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20%;
+    width: 100%;
+  }
+
+  .container form h1 {
+    font-size: 28px;
+  }
+
+  .container form label {
+    font-size: 20px;
+  }
+
+  .container form input {
+    width: 100%;
+  }
+
+  .container form button {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/chat-page-styles.css" />
+    <link rel="icon" href="/images/chat-bubble.svg" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <div class="app-info">
+          <img src="/images/chat-bubble.svg" alt="" class="image" />
+          <div class="app-name">Chat App</div>
+        </div>
+        <div class="users" id="users">
+          <div class="users-header">Who is in this room ?</div>
+        </div>
+      </div>
+      <div class="main-side">
+        <div class="room-info" id="room-info">
+          <div class="room" id="room">
+            <img
+              src="https://api.adorable.io/avatars/285/g.png"
+              alt=""
+              class="image"
+            />
+            <div class="roomname">Name of the room</div>
+          </div>
+          <div class="tools">
+            <svg
+              width="35px"
+              height="35px"
+              version="1.1"
+              id="Layer_1"
+              class="attach"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 280.067 280.067"
+              style="enable-background: new 0 0 280.067 280.067; color: #000;"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  style="fill: #ccc;"
+                  d="M149.823,257.142c-31.398,30.698-81.882,30.576-113.105-0.429
+            		c-31.214-30.987-31.337-81.129-0.42-112.308l-0.026-0.018L149.841,31.615l14.203-14.098c23.522-23.356,61.65-23.356,85.172,0
+            		s23.522,61.221,0,84.586l-125.19,123.02l-0.044-0.035c-15.428,14.771-40.018,14.666-55.262-0.394
+            		c-15.244-15.069-15.34-39.361-0.394-54.588l-0.044-0.053l13.94-13.756l69.701-68.843l13.931,13.774l-83.632,82.599
+            		c-7.701,7.596-7.701,19.926,0,27.53s20.188,7.604,27.88,0L235.02,87.987l-0.035-0.026l0.473-0.403
+            		c15.682-15.568,15.682-40.823,0-56.39s-41.094-15.568-56.776,0l-0.42,0.473l-0.026-0.018l-14.194,14.089L50.466,158.485
+            		c-23.522,23.356-23.522,61.221,0,84.577s61.659,23.356,85.163,0l99.375-98.675l14.194-14.089l14.194,14.089l-14.194,14.098
+            		l-99.357,98.675C149.841,257.159,149.823,257.142,149.823,257.142z"
+                />
+              </g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+
+            <ul class="dropdown">
+              <li class="dropdown-item">
+                <div class="folder">
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="folder"
+                    class="svg-inline--fa fa-folder fa-w-16"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      fill="#f4511e"
+                      d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"
+                    ></path>
+                  </svg>
+                </div>
+              </li>
+              <li class="dropdown-item">
+                <div class="images">
+                  <input
+                    type="file"
+                    name="image-input"
+                    id="image-input"
+                    accept="image/*"
+                  />
+                  <label for="image-input">
+                    <svg
+                      version="1.1"
+                      id="Layer_1"
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512;"
+                      xml:space="preserve"
+                    >
+                      <style type="text/css">
+                        .st0 {
+                          fill: #719f7b;
+                        }
+                      </style>
+                      <path
+                        class="st0"
+                        d="M464,64H48C21.5,64,0,85.5,0,112v288c0,26.5,21.5,48,48,48h416c26.5,0,48-21.5,48-48V112
+                    	C512,85.5,490.5,64,464,64z M458,400H54c-3.3,0-6-2.7-6-6V118c0-3.3,2.7-6,6-6h404c3.3,0,6,2.7,6,6v276C464,397.3,461.3,400,458,400
+                    	z M128,152c-22.1,0-40,17.9-40,40s17.9,40,40,40s40-17.9,40-40S150.1,152,128,152z M96,352h320v-80l-87.5-87.5
+                    	c-4.7-4.7-12.3-4.7-17,0L192,304l-39.5-39.5c-4.7-4.7-12.3-4.7-17,0L96,304V352z"
+                      />
+                    </svg>
+                  </label>
+                </div>
+              </li>
+              <li class="dropdown-item">
+                <div class="map">
+                  <svg
+                    version="1.1"
+                    id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 511.999 511.999"
+                    style="enable-background: new 0 0 511.999 511.999;"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <path
+                        style="fill: #44c868;"
+                        d="M511.879,475.685l-40.224-221.611c-0.401-2.212-1.773-4.128-3.739-5.221l-101.242-56.31
+                  		c-1.314-0.732-2.787-1.023-4.234-0.911l18.419,237.608l-0.617,0.276l121.164,54.357c0.986,0.441,2.034,0.659,3.077,0.659
+                  		c1.651,0,3.287-0.543,4.632-1.596C511.313,481.22,512.376,478.428,511.879,475.685z"
+                      />
+                      <path
+                        style="fill: #44c868;"
+                        d="M256,246.375l-103.545-53.931c-1.241-0.647-2.617-0.911-3.972-0.82
+                  		c0.359-0.022,0.72-0.02,1.078,0.008l-18.419,237.608l121.781,54.634c0.983,0.44,2.032,0.659,3.077,0.659l0,0V246.375z"
+                      />
+                    </g>
+                    <g>
+                      <path
+                        style="fill: #4ce166;"
+                        d="M149.56,191.633c-1.447-0.112-2.92,0.179-4.234,0.91l-101.243,56.31
+                  		c-1.966,1.093-3.338,3.008-3.739,5.221L0.121,475.685c-0.498,2.742,0.566,5.534,2.763,7.252c1.347,1.053,2.982,1.596,4.632,1.596
+                  		c1.043,0,2.092-0.217,3.077-0.659l120.504-54.061L149.56,191.633z"
+                      />
+                      <path
+                        style="fill: #4ce166;"
+                        d="M362.439,191.628c-0.996,0.077-1.981,0.342-2.894,0.818L256,246.376v238.158c0,0,0,0,0.001,0
+                  		c1.045,0,2.095-0.218,3.077-0.659l121.781-54.634L362.439,191.628z"
+                      />
+                    </g>
+                    <polygon
+                      style="fill: #ffdb56;"
+                      points="28.154,321.233 19.983,366.252 140.977,302.346 143.786,266.107 144.252,260.097 "
+                    />
+                    <path
+                      style="fill: #a8eefc;"
+                      d="M142.066,288.294l-1.089,14.052L19.983,366.252L0.121,475.685c-0.498,2.742,0.566,5.534,2.763,7.252
+                  	c1.347,1.053,2.982,1.596,4.632,1.596c1.043,0,2.092-0.217,3.077-0.659l120.504-54.061L142.066,288.294L142.066,288.294z"
+                    />
+                    <g>
+                      <polygon
+                        style="fill: #ffbb24;"
+                        points="256.03,276.08 144.252,260.097 140.977,302.346 256,477.025 256,413.507 187.363,305.429 
+                  		256.03,313.642 	"
+                      />
+                      <polygon
+                        style="fill: #ffbb24;"
+                        points="459.946,244.421 411.311,217.37 365.269,228.128 365.845,235.564 368.119,264.898 	"
+                      />
+                    </g>
+                    <polygon
+                      style="fill: #ffdb56;"
+                      points="372.202,317.576 367.842,261.327 367.842,261.327 365.269,228.128 256.03,276.08 
+                  	256.03,313.642 327.386,282.612 "
+                    />
+                    <path
+                      style="fill: #ffbb24;"
+                      d="M511.879,475.685l-10.103-55.666L368.119,264.898l4.084,52.678l137.07,165.221
+                  	C511.357,481.07,512.364,478.358,511.879,475.685z"
+                    />
+                    <path
+                      style="fill: #ff4a4a;"
+                      d="M256.481,27.465c-57.963,0-105.12,47.118-105.12,105.034c0,35.826,17.009,74.29,50.556,114.322
+                  	c24.639,29.403,48.943,48.314,49.966,49.105c1.354,1.047,2.976,1.57,4.599,1.57c1.622,0,3.245-0.523,4.599-1.57
+                  	c1.022-0.791,25.327-19.702,49.966-49.105c33.547-40.032,50.556-78.495,50.556-114.322
+                  	C361.601,74.583,314.444,27.465,256.481,27.465z M295.411,132.498c0,21.482-17.43,38.898-38.93,38.898
+                  	c-21.5,0-38.93-17.415-38.93-38.898s17.43-38.898,38.93-38.898C277.981,93.6,295.411,111.016,295.411,132.498z"
+                    />
+                    <path
+                      style="fill: #e7343f;"
+                      d="M256.481,27.465c-4.594,0-9.119,0.298-13.559,0.872c51.583,6.667,91.562,50.836,91.562,104.162
+                  	c0,35.826-17.009,74.29-50.556,114.322c-15.845,18.908-31.54,33.467-41.005,41.669c5.254,4.552,8.596,7.154,8.96,7.436
+                  	c1.354,1.047,2.976,1.57,4.599,1.57c1.622,0,3.245-0.523,4.599-1.57c1.022-0.791,25.327-19.702,49.966-49.105
+                  	c33.547-40.032,50.556-78.495,50.556-114.322C361.601,74.583,314.444,27.465,256.481,27.465z"
+                    />
+                    <path
+                      style="fill: #ffdb56;"
+                      d="M259.078,483.874l45.285-20.316L256,413.507v71.026c0,0,0,0,0.001,0
+                  	C257.046,484.533,258.095,484.316,259.078,483.874z"
+                    />
+                    <g>
+                      <path
+                        style="fill: #1ea4e9;"
+                        d="M471.654,254.074c-0.401-2.212-1.773-4.128-3.739-5.221l-7.97-4.433l-91.827,20.477l0,0
+                  		l133.656,155.121L471.654,254.074z"
+                      />
+                      <path
+                        style="fill: #1ea4e9;"
+                        d="M255.999,484.533C256,484.533,256,484.533,255.999,484.533v-7.508L140.977,302.346l-9.837,126.895
+                  		l121.781,54.634C253.904,484.316,254.953,484.533,255.999,484.533z"
+                      />
+                    </g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                  </svg>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="message-section">
+          <div class="message-container"></div>
+          <div class="message-input">
+            <form id="message-form" class="message-form">
+              <input
+                name="message"
+                type="text"
+                placeholder="Type your message here"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script id="message-template" type="text/html">
+      <div class="message">
+        <div class="sender">{{username}}</div>
+        <div class="message-text">
+          {{message}}
+        </div>
+      </div>
+    </script>
+    <script id="render-image-template" type="text/html">
+      <div class="message">
+        <div class="sender">{{username}}</div>
+        <div class="message-text">
+          <img class="enlargable-image" src="{{url}}" alt="Image" style="width:300px;height:200px;background-size:cover;">
+          <!-- ENLARGABLE IMAGE -->
+          <div class="myModal modal">
+            <span class="close">&times;</span>
+            <img class="modal-content img01">
+            <div class="caption"></div>
+          </div>
+          <!-- END -->
+        </div>
+        <div class="date message-date">2 minutes ago</div>
+      </div>
+    </script>
+    <script id="user-template" type="text/html">
+      <div class="users-header">Who is in this room ?</div>
+      {{#users}}
+        <div class="user">
+            <img
+              src="https://api.adorable.io/avatars/285/{{username}}.png"
+              alt=""
+              class="image"
+            />
+            <span class="username">{{username}}</span>
+            <span class="date">2 minutes ago</span>
+          </div>
+          {{/users}}
+    </script>
+    <script id="room-header-template" type="text/html">
+        <img
+          src="https://api.adorable.io/avatars/285/g.png"
+          alt=""
+          class="image"
+        />
+      <div class="roomname">{{room}}</div>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
+      integrity="sha256-bQmrZe4yPnQrLTY+1gYylfNMBuGfnT/HKsCGX+9Xuqo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/chat-page.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
