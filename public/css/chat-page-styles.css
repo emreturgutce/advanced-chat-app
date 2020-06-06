@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #bae0fa;
+  background-color: #829caf;
 }
 
 .container {
@@ -100,7 +100,7 @@ body {
 
 .room-info {
   margin-bottom: 0.5rem;
-  box-shadow: 3px 1px 17px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 1px 17px 11px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   display: grid;
   padding: 0.4rem 1.2rem;
@@ -212,7 +212,7 @@ svg {
 /* End of animation*/
 .message-section {
   box-shadow: 3px 1px 17px -11px rgba(0, 0, 0, 0.75);
-  background-color: rgba(243, 87, 102, 0.8);
+  background-color: #AF839C;
   box-shadow: 9px 7px 31px 5px rgba(204, 202, 204, 1);
   display: grid;
   grid-template-rows: 12fr 1fr;

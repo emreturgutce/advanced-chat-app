@@ -37,7 +37,7 @@ body {
   width: 25%;
   height: 65%;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .container form {
@@ -50,7 +50,7 @@ body {
 
 .container form h1 {
   font-size: 32px;
-  color: #707070;
+  color: #424242;
 }
 
 .row {
