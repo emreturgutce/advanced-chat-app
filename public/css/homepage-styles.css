@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #ffffff;
+  font-family: "Rockwell";
 }
 
 html {
@@ -34,10 +35,11 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: -1px 3px 17px 0px rgba(0, 0, 0, 0.55);
+  border-radius: 3px;
   width: 25%;
   height: 65%;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.92);
+  padding: 2.4rem;
+  background: #eeeeee; 
 }
 
 .container form {
@@ -50,7 +52,8 @@ body {
 
 .container form h1 {
   font-size: 32px;
-  color: #424242;
+  color: #222831;
+  margin-top: 1rem;
 }
 
 .row {
@@ -62,14 +65,14 @@ body {
 
 .container form label {
   font-size: 24px;
-  color: #707070;
+  color: #4C5157;
   margin-right: auto;
 }
 
 .container form input {
   outline: none;
   font-size: 18px;
-  color: #707070;
+  color: #4C5157;
   border: none;
   background: none;
   border-bottom: 1px solid #707070;
@@ -79,12 +82,12 @@ body {
 .container form button {
   outline: none;
   border: none;
-  padding: 9px 16px;
-  font-size: 18px;
+  padding: 6px 24px;
+  font-size: 1.4rem;
   border-radius: 1rem;
-  background-color: #5e9bc4;
+  background-color: #00ADB5;
   align-self: flex-end;
-  font-style: italic;
+  font-family: "Vag Rounded";
   color: #fff;
   cursor: pointer;
   box-shadow: 2px 2px 8px 2px #aaaaaa;
@@ -98,8 +101,8 @@ body {
 
 @media only screen and (max-width: 1200px) {
   .container {
-    width: 27%;
-    height: 58%;
+    width: 40%;
+    height: 45%;
     padding: 1.7rem;
   }
 
@@ -119,16 +122,21 @@ body {
 
 @media only screen and (max-width: 992px) {
   .container {
-    width: 40%;
+    width: 50%;
     height: 65%;
     padding: 1.4rem;
   }
 }
-
+@media only screen and (max-width: 768px){
+    .container{
+        width: 50%;
+        height: 55%;
+    }
+}
 @media only screen and (max-width: 600px) {
   .container {
-    width: 60%;
-    height: 65%;
+    width: 75%;
+    height: 75%;
     padding: 1.8rem;
   }
 

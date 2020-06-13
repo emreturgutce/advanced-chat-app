@@ -4,11 +4,11 @@
   box-sizing: border-box;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   overflow: hidden;
-  color: #fff;
+  color: #eee;
 }
 
 body {
-  background-color: #829caf;
+  background-color: #4C5158;
 }
 
 .container {
@@ -20,6 +20,7 @@ body {
 .left-side {
   display: grid;
   grid-template-rows: 1fr 8fr;
+  border-right:1px solid rgba(51,55,63,.4);
 }
 
 .app-name {
@@ -28,17 +29,11 @@ body {
 }
 
 .app-info {
-  box-shadow: 3px 1px 17px -11px rgba(0, 0, 0, 0.75);
   border-radius: 2px;
   padding: 0.4rem 0.9rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-gap: 0.9rem;
-}
-
-.app-info:hover {
-  cursor: pointer;
-  opacity: 0.8;
 }
 
 .app-info .image {
@@ -100,7 +95,6 @@ body {
 
 .room-info {
   margin-bottom: 0.5rem;
-  box-shadow: 3px 1px 17px 11px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   display: grid;
   padding: 0.4rem 1.2rem;
@@ -111,11 +105,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 13fr;
   grid-gap: 1.4rem;
-}
-
-.room:hover {
-  cursor: pointer;
-  opacity: 0.8;
 }
 
 .room-info .image {
@@ -211,9 +200,7 @@ svg {
 
 /* End of animation*/
 .message-section {
-  box-shadow: 3px 1px 17px -11px rgba(0, 0, 0, 0.75);
-  background-color: #AF839C;
-  box-shadow: 9px 7px 31px 5px rgba(204, 202, 204, 1);
+  background-color: #5E917A;
   display: grid;
   grid-template-rows: 12fr 1fr;
   border-radius: 8px;
