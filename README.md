@@ -2,9 +2,9 @@
 
 ---
 
-![](github_images/homepage.jpeg)
-![](github_images/chatpage.jpeg)
-![](github_images/attach.jpeg)
+![](https://github.com/emreturgutce/advanced-chat-app/blob/master/readme_images/homepage.JPG)
+![](https://github.com/emreturgutce/advanced-chat-app/blob/master/readme_images/chatpage.JPG)
+![](https://github.com/emreturgutce/advanced-chat-app/blob/master/readme_images/attach.JPG)
 
 ##### LIVE DEMO
 You can try this app using the link.
