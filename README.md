@@ -1,10 +1,8 @@
 ## Chat App
 
----
-
 This is an app that you can chat with your friends and send your location and images to them.
 
-You can try this app in the live demo section. [Go to Live Demo Section](#LIVE DEMO)
+You can try this app in the live demo section. [Go to Live Demo Section](#live-demo)
 
 ![](https://github.com/emreturgutce/advanced-chat-app/blob/master/readme_images/homepage.JPG)
 ![](https://github.com/emreturgutce/advanced-chat-app/blob/master/readme_images/chatpage.JPG)
