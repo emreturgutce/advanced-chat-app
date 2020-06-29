@@ -69,7 +69,7 @@ io.on("connection", (socket) => {
     const user = getUser(socket.id);
 
     // Emit "message" event which sends the message that the user typed to the room
-    io.emit("message", generateMessage(user.username, msg));
+    socket.emit("message", generateMessage(user.username, msg));
 
     callback();
   });
@@ -80,7 +80,7 @@ io.on("connection", (socket) => {
     const user = getUser(socket.id);
 
     // Emit "locationMessage" event to the room which sends the location of the user
-    io.to(user.room).emit(
+    socket.to(user.room).emit(
       "locationMessage",
       generateLocation(user.username, url)
     );
