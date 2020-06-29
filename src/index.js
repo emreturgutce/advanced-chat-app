@@ -69,7 +69,7 @@ io.on("connection", (socket) => {
     const user = getUser(socket.id);
 
     // Emit "message" event which sends the message that the user typed to the room
-    io.emit("message", generateMessage(user.username, msg));
+    io.to(user.room).emit("message", generateMessage(user.username, msg));
 
     callback();
   });
